@@ -1,0 +1,19 @@
+def calcularAño():
+
+    año = int(input('dinos un año '))
+    # para calcular si es bisiesto debe de ser divisible entre 4 pero no entre 100
+    # si es divisible entre 100 tambien tiene que ser divisible entre 400 para ser bisiesto
+    calculo = año % 4
+    calculo2 = año % 100
+    calculo3 = año % 400
+
+    # vemos si es divisible entre 4 y no entre 100
+    if (calculo == 0 and calculo2 != 0):
+        print('es año bisiesto')
+        # vemos si es divisible entre 100 y entre 400
+    elif (calculo2 == 0 and calculo3 == 0):
+        print('es año bisiesto')
+    else:
+        print('no es año bisiesto')
+
+calcularAño()
